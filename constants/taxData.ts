@@ -17,3 +17,5 @@ export const taxBrackets = [
     taxRate: "$51,667 + 45% of excess over $180,000",
   },
 ];
+
+export const taxData = [0, 19, 32.5, 37, 45];
