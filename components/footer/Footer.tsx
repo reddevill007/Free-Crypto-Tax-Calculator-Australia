@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black p-4 lg:p-0">
       <div className="container mx-auto">
         {/* Header */}
         <div className="w-full flex items-center lg:justify-between lg:flex-row flex-col justify-center">
@@ -31,9 +31,9 @@ const Footer = () => {
         </div>
 
         <hr className="block border-t mb-8 border-[rgba(255,255,255,0.20)]" />
-        <div className="flex justify-between w-full flex-wrap mb-8 md:p-0 p-4">
+        <div className="md:flex justify-between w-full flex-wrap mb-8 md:p-0 p-4 grid grid-cols-2">
           {footerData.map((item, index) => (
-            <div key={index} className="w-[250px]">
+            <div key={index} className="lg:w-[250px] w-[156px]">
               <p className="text-white text-base font-bold mb-4">
                 {item.title}
               </p>
@@ -46,7 +46,7 @@ const Footer = () => {
                 ))}
               </ul>
               {index === 0 && (
-                <div className="flex mt-5 w-full">
+                <div className="md:flex mt-5 w-full hidden">
                   <Image
                     src="/images/footer.png"
                     alt="Mail"
@@ -57,10 +57,19 @@ const Footer = () => {
               )}
             </div>
           ))}
+          <div className="md:hidden mt-5 w-[160px] flex">
+            <Image
+              src="/images/footer.png"
+              alt="Mail"
+              height={50}
+              width={50}
+              className="object-cover w-40 h-40"
+            />
+          </div>
         </div>
 
         <hr className="block border-t mb-8 border-[rgba(255,255,255,0.20)]" />
-        <p className="text-center text-white pb-8">
+        <p className="text-center text-white pb-8 md:text-base text-sm">
           © All rights reserved by Simplify Infotech Pvt. Ltd.
         </p>
       </div>
@@ -69,13 +78,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-/*
-color: #FFF;
-
-font-family: Inter;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 17px; 
-*/

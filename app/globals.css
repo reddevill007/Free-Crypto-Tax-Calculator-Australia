@@ -18,3 +18,10 @@
   border-radius: 2px;
   background: rgba(41, 151, 249, 0.50);
 }
+
+@media screen and (max-width: 480px) {
+  .myHtml span {
+    padding: 3px;
+    margin-left: 6px;
+  }
+}
