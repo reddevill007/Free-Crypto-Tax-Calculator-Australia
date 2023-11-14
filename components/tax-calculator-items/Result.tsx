@@ -23,7 +23,7 @@ const Result = ({
               Capital gains amount
             </span>
             <div className="p-4 w-full rounded-lg bg-textarea">
-              $ {capitalGain}
+              $ {isNaN(capitalGain) ? 0 : capitalGain}
             </div>
           </div>
           <div className="md:w-[300px] w-full h-20 flex flex-col gap-2">
@@ -31,7 +31,7 @@ const Result = ({
               Discount for long term gains
             </span>
             <div className="p-4 w-full rounded-lg bg-textarea">
-              $ {discount}
+              $ {isNaN(discount) ? 0 : discount}
             </div>
           </div>
         </div>
@@ -41,13 +41,17 @@ const Result = ({
           <span className="text-gray-1 text-base font-medium">
             Net Capital gains tax amount
           </span>
-          <span className="text-[#0FBA83] text-2xl font-bold">$ {netTax}</span>
+          <span className="text-[#0FBA83] text-2xl font-bold">
+            $ {isNaN(netTax) ? 0 : netTax}
+          </span>
         </div>
         <div className="p-4 w-full md:w-[48%]  rounded-lg bg-[#EBF2FF] items-center justify-center flex flex-col gap-2">
           <span className="text-gray-1 text-base font-medium">
             The tax you need to pay
           </span>
-          <span className="text-[#0141CF] text-2xl font-bold">$ {tax}</span>
+          <span className="text-[#0141CF] text-2xl font-bold">
+            $ {isNaN(tax) ? 0 : tax}
+          </span>
         </div>
       </div>
     </>

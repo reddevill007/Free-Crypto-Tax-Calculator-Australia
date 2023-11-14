@@ -25,3 +25,69 @@
     margin-left: 6px;
   }
 }
+
+.faq {
+  color: #3e424a;
+  font-size: 14px;
+  font-weight: 500;
+
+}
+
+.faq p {
+  color: #3e424a;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 160%;
+  font-weight: 500;
+  gap: 12px;
+}
+
+.faq ol {
+  list-style: decimal;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.faq ul {
+  list-style: disc;
+}
+
+.faq ul li,
+.faq ol li {
+  margin-left: 20px;
+}
+
+.faq p span {
+  color: #0052FE;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-decoration-line: underline;
+}
+
+table {
+  margin-top: 20px;
+}
+
+.faq table,
+.faq td,
+.faq th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.faq table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.faq th,
+.faq td {
+  padding: 15px;
+}
+
+.faq strong {
+  margin-top: 20px;
+}
