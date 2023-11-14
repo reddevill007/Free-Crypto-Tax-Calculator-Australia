@@ -57,16 +57,16 @@ const TaxCalculator = () => {
   ]);
 
   return (
-    <div className="flex-1 rounded-2xl bg-white pt-9 pr-[73px] pb-14 pl-20">
-      <h1 className="bg-white text-gary-1 text-center font-bold text-4xl leading-10 mb-10">
+    <div className="flex-1 sm:w-[90%] rounded-2xl bg-white lg:pt-9 lg:pr-[73px] lg:pb-14 lg:pl-20 p-4 shadow-lg">
+      <h1 className="bg-white text-gary-1 text-center font-bold text-4xl leading-10 mb-10 sm:text-2xl">
         Free Crypto Tax Calculator Australia
       </h1>
       <ConstantFeilds />
       <hr className="block border-t my-7 border-[rgba(201,207,221,0.60)]" />
 
       <div className="flex flex-col gap-10">
-        <div className="flex w-full justify-between items-center">
-          <div className="w-[300px] h-20 flex flex-col gap-2">
+        <div className="flex w-full justify-between items-center flex-col md:flex-row md:gap-0 gap-6">
+          <div className="md:w-[300px] w-full h-20 flex flex-col gap-2">
             <label
               htmlFor="purchasePrice"
               className="text-sm font-normal text-gary-1"
@@ -81,7 +81,7 @@ const TaxCalculator = () => {
               onChange={(e) => setPurchasePrice(parseInt(e.target.value))}
             />
           </div>
-          <div className="w-[300px] h-20 flex flex-col gap-2">
+          <div className="md:w-[300px] w-full h-20 flex flex-col gap-2">
             <label
               htmlFor="salePrice"
               className="text-sm font-normal text-gary-1"
@@ -97,8 +97,8 @@ const TaxCalculator = () => {
             />
           </div>
         </div>
-        <div className="flex w-full justify-between items-center">
-          <div className="w-[300px] h-20 flex flex-col gap-2">
+        <div className="flex w-full justify-between items-center flex-col md:flex-row md:gap-0 gap-6">
+          <div className="md:w-[300px] w-full h-20 flex flex-col gap-2">
             <label
               htmlFor="expence"
               className="text-sm font-normal text-gary-1"
@@ -113,7 +113,7 @@ const TaxCalculator = () => {
               onChange={(e) => setExpenses(parseInt(e.target.value))}
             />
           </div>
-          <div className="w-[300px] flex gap-2 flex-col">
+          <div className="md:w-[300px] w-full flex gap-2 flex-col">
             <span className="text-sm font-normal text-gary-1">
               Investment Type
             </span>
@@ -145,8 +145,8 @@ const TaxCalculator = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-full justify-between items-center">
-          <div className="w-[300px] h-20 flex flex-col gap-2">
+        <div className="flex w-full justify-between items-center flex-col md:flex-row md:gap-0 gap-6">
+          <div className="md:w-[300px] w-full h-20 flex flex-col gap-2">
             <label
               htmlFor="annualIncome"
               className="text-sm font-normal text-gary-1"
@@ -164,7 +164,7 @@ const TaxCalculator = () => {
               ))}
             </select>
           </div>
-          <div className="w-[300px] h-20 flex flex-col gap-2 justify-center">
+          <div className="md:w-[300px] w-full h-20 flex flex-col gap-2 justify-center">
             <p className="text-sm text-[#3E424A]">Tax Rate</p>
             <p className="text-sm text-[#3E424A]">
               {taxBrackets[taxRate].taxRate}
@@ -172,8 +172,8 @@ const TaxCalculator = () => {
           </div>
         </div>
         {isLongTerm && (
-          <div className="flex w-full justify-between items-center">
-            <div className="w-[300px] h-20 flex flex-col gap-2">
+          <div className="flex w-full justify-between items-center flex-col md:flex-row md:gap-0 gap-6">
+            <div className="md:w-[300px] w-full h-20 flex flex-col gap-2">
               <span className="text-sm font-normal text-gary-1">
                 Capital gains amount
               </span>
@@ -181,7 +181,7 @@ const TaxCalculator = () => {
                 $ {capitalGain}
               </div>
             </div>
-            <div className="w-[300px] h-20 flex flex-col gap-2">
+            <div className="md:w-[300px] w-full h-20 flex flex-col gap-2">
               <span className="text-sm font-normal text-gary-1">
                 Discount for long term gains
               </span>
@@ -191,8 +191,8 @@ const TaxCalculator = () => {
             </div>
           </div>
         )}
-        <div className="flex w-full justify-between items-center">
-          <div className="p-4 w-[48%] rounded-lg flex flex-col gap-2 bg-[#EBF9F4] items-center justify-center">
+        <div className="flex w-full justify-between items-center flex-col md:flex-row md:gap-0 gap-6">
+          <div className="p-4 w-full md:w-[48%] rounded-lg flex flex-col gap-2 bg-[#EBF9F4] items-center justify-center">
             <span className="text-gray-1 text-base font-medium">
               Net Capital gains tax amount
             </span>
@@ -200,7 +200,7 @@ const TaxCalculator = () => {
               $ {netTax}
             </span>
           </div>
-          <div className="p-4 w-[48%] rounded-lg bg-[#EBF2FF] items-center justify-center flex flex-col gap-2">
+          <div className="p-4 w-full md:w-[48%]  rounded-lg bg-[#EBF2FF] items-center justify-center flex flex-col gap-2">
             <span className="text-gray-1 text-base font-medium">
               The tax you need to pay
             </span>

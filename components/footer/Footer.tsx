@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="bg-black">
       <div className="container mx-auto">
         {/* Header */}
-        <div className="w-full flex items-center justify-between">
+        <div className="w-full flex items-center lg:justify-between lg:flex-row flex-col justify-center">
           <div className="h-[72px] w-fit flex items-center justify-center">
             <Image
               src="/images/logo_bland.png"
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
 
         <hr className="block border-t mb-8 border-[rgba(255,255,255,0.20)]" />
-        <div className="flex justify-between w-full flex-wrap mb-8">
+        <div className="flex justify-between w-full flex-wrap mb-8 md:p-0 p-4">
           {footerData.map((item, index) => (
             <div key={index} className="w-[250px]">
               <p className="text-white text-base font-bold mb-4">

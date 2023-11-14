@@ -6,7 +6,7 @@ import Faq from "../faq/Faq";
 const Hero = () => {
   return (
     <>
-      <div className="flex gap-5 lg:flex-row flex-col lg:items-start items-center">
+      <div className="flex gap-5 lg:flex-row flex-col lg:items-start items-center p-0 sm:p-3">
         <TaxCalculator />
         <GettingStarted />
       </div>

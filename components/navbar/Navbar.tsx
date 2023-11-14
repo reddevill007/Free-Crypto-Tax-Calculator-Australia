@@ -1,15 +1,31 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import { useState } from "react";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="bg-white text-black shadow-[0px_0px_12px_0px_#1026490F] h-20 w-full">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between px-5">
         <div>
           <Image src="/images/logo.png" alt="KoinX" height="72" width={96} />
         </div>
 
-        <div className="flex gap-16 items-center justify-center">
+        <div
+          className="block lg:hidden cursor-pointer"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <Image
+            src="/images/hamburger.png"
+            alt="menu"
+            height="20"
+            width={20}
+          />
+        </div>
+
+        <div className="lg:flex hidden gap-16 items-center justify-center">
           <ul className="flex gap-8">
             <li className="text-black text-base font-semibold cursor-pointer">
               Features
@@ -31,6 +47,8 @@ const Navbar = () => {
             Sign In
           </button>
         </div>
+
+        {isOpen && <MobileNav />}
       </div>
     </nav>
   );
