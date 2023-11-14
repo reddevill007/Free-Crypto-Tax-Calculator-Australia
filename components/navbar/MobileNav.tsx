@@ -2,7 +2,7 @@ import React from "react";
 
 const MobileNav = () => {
   return (
-    <div className="flex flex-col lg:hidden bg-textarea z-50 fixed top-20 left-0 w-full h-[calc(100vh-80px)] items-center justify-around p-4">
+    <div className="flex flex-col lg:hidden bg-textarea z-[200] fixed top-20 left-0 w-full h-[calc(100vh-80px)] items-center justify-around p-4">
       <ul className="flex gap-8 flex-col items-center flex-1 justify-around">
         <li className="text-black text-base font-semibold cursor-pointer">
           Features

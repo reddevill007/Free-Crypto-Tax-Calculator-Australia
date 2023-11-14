@@ -19,7 +19,7 @@ const ConstantFeilds = () => {
           <option>FY 2023-24</option>
         </select>
       </div>
-      <div className="flex lg:items-center justify-center gap-3 lg:flex-row flex-col items-start relative">
+      <div className="flex lg:items-center justify-center gap-3 lg:flex-row flex-col items-start relative z-0">
         <Image
           src="/images/australia.svg"
           alt="Mail"
