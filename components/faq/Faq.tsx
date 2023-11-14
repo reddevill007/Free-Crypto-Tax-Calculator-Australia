@@ -3,7 +3,7 @@ import React from "react";
 
 const Faq = () => {
   return (
-    <div className="w-fit mt-5 rounded-2xl bg-white pt-9 pr-[73px] pb-14 pl-20 max-w-[830px]">
+    <div className="w-fit mt-5 rounded-2xl bg-white md:pt-9 md:pr-[73px] md:pb-14 md:pl-20 p-5 shadow-lg max-w-[830px] ">
       <h1 className="max-w-[500px] text-gary-1 font-bold text-3xl mb-6">
         Frequently Asked Questions
       </h1>
@@ -23,15 +23,3 @@ const Faq = () => {
 };
 
 export default Faq;
-
-/*
-height: 129px;
-flex-shrink: 0;
-align-self: stretch;
-color: var(--gray-2, #3E424A);
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 160%;
- */

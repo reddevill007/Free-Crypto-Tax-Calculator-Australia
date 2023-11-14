@@ -4,7 +4,7 @@ import React from "react";
 const Cta = () => {
   return (
     <div className="md:flex hidden items-center justify-center w-full my-[140px]">
-      <div className="bg-[url('/images/bg-mask.png')] w-[1110px] h-[288px] bg-no-repeat bg-center bg-cover flex items-center justify-center gap-20 rounded-2xl">
+      <div className="bg-[url('/images/bg-mask.png')] w-[1110px] h-[288px] bg-no-repeat bg-center bg-cover flex items-center justify-center gap-20 rounded-2xl shadow-lg">
         <div>
           <Image src="/images/mail.png" alt="Mail" height={235} width={235} />
         </div>

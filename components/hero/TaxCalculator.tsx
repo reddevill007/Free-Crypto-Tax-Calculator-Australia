@@ -4,6 +4,8 @@ import { taxBrackets, taxData } from "@/constants/taxData";
 import { useState, useEffect } from "react";
 import ConstantFeilds from "../tax-calculator-items/ConstantFeilds";
 import TickSvg from "../svg/TickSvg";
+import Result from "../tax-calculator-items/Result";
+import TaxBracket from "../tax-calculator-items/TaxBracket";
 
 const TaxCalculator = () => {
   const [selectedIncomeRange, setSelectedIncomeRange] = useState(
@@ -58,7 +60,7 @@ const TaxCalculator = () => {
 
   return (
     <div className="flex-1 sm:w-[90%] rounded-2xl bg-white lg:pt-9 lg:pr-[73px] lg:pb-14 lg:pl-20 p-4 shadow-lg">
-      <h1 className="bg-white text-gary-1 text-center font-bold text-4xl leading-10 mb-10 sm:text-2xl">
+      <h1 className="bg-white text-gary-1 text-center font-bold md:text-4xl leading-10 mb-10 text-2xl">
         Free Crypto Tax Calculator Australia
       </h1>
       <ConstantFeilds />
@@ -164,49 +166,15 @@ const TaxCalculator = () => {
               ))}
             </select>
           </div>
-          <div className="md:w-[300px] w-full h-20 flex flex-col gap-2 justify-center">
-            <p className="text-sm text-[#3E424A]">Tax Rate</p>
-            <p className="text-sm text-[#3E424A]">
-              {taxBrackets[taxRate].taxRate}
-            </p>
-          </div>
+          <TaxBracket taxRate={taxBrackets[taxRate].taxRate} />
         </div>
-        {isLongTerm && (
-          <div className="flex w-full justify-between items-center flex-col md:flex-row md:gap-0 gap-6">
-            <div className="md:w-[300px] w-full h-20 flex flex-col gap-2">
-              <span className="text-sm font-normal text-gary-1">
-                Capital gains amount
-              </span>
-              <div className="p-4 w-full rounded-lg bg-textarea">
-                $ {capitalGain}
-              </div>
-            </div>
-            <div className="md:w-[300px] w-full h-20 flex flex-col gap-2">
-              <span className="text-sm font-normal text-gary-1">
-                Discount for long term gains
-              </span>
-              <div className="p-4 w-full rounded-lg bg-textarea">
-                $ {discount}
-              </div>
-            </div>
-          </div>
-        )}
-        <div className="flex w-full justify-between items-center flex-col md:flex-row md:gap-0 gap-6">
-          <div className="p-4 w-full md:w-[48%] rounded-lg flex flex-col gap-2 bg-[#EBF9F4] items-center justify-center">
-            <span className="text-gray-1 text-base font-medium">
-              Net Capital gains tax amount
-            </span>
-            <span className="text-[#0FBA83] text-2xl font-bold">
-              $ {netTax}
-            </span>
-          </div>
-          <div className="p-4 w-full md:w-[48%]  rounded-lg bg-[#EBF2FF] items-center justify-center flex flex-col gap-2">
-            <span className="text-gray-1 text-base font-medium">
-              The tax you need to pay
-            </span>
-            <span className="text-[#0141CF] text-2xl font-bold">$ {tax}</span>
-          </div>
-        </div>
+        <Result
+          isLongTerm={isLongTerm}
+          capitalGain={capitalGain}
+          discount={discount}
+          netTax={netTax}
+          tax={tax}
+        />
       </div>
     </div>
   );

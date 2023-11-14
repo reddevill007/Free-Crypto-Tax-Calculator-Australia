@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   body {
-    @apply bg-text-muted
+    @apply bg-text-muted overflow-x-hidden
   }
 }
 

@@ -3,7 +3,7 @@ import React from "react";
 
 const GettingStarted = () => {
   return (
-    <div className="flex max-w-[426px] py-[55px] px-4 flex-col gap-9 bg-blue rounded-lg h-fit">
+    <div className="flex max-w-[426px] py-[55px] px-4 flex-col gap-9 bg-blue rounded-lg h-fit shadow-lg">
       <div>
         <h1 className="text-white text-2xl font-bold leading-10 mb-4 text-center">
           Get Started with KoinX for FREE

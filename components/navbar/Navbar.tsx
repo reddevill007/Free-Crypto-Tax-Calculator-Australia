@@ -7,7 +7,7 @@ import MobileNav from "./MobileNav";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-white text-black shadow-[0px_0px_12px_0px_#1026490F] h-20 w-full">
+    <nav className="bg-white text-black shadow-[0px_0px_12px_0px_#1026490F] h-20 w-full fixed top-0 left-0">
       <div className="container mx-auto flex items-center justify-between px-5">
         <div>
           <Image src="/images/logo.png" alt="KoinX" height="72" width={96} />
